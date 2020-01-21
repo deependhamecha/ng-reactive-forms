@@ -1,0 +1,26 @@
+<button type="button" routerLink="/create">+ Add</button>
+
+<div class="container">
+
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Subjects</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students;let i=index;">
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.sex}}</td>
+        <td>
+          <ul><li *ngFor="let sub of s.subjects;let j=index;"></li></ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
